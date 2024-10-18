@@ -7,8 +7,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn import tree  # Import the tree module for visualizing the decision tree
-#SIDDHANT ATHAWALE T071
-print("Siddhant Athawale T071")
+
 print("Libraries imported")
 
 # Load the Iris dataset from sklearn
@@ -47,7 +46,7 @@ print("Accuracy on training set before pruning: {:.4f}".format(accuracy_score(y_
 
 # Visualize the Decision Tree before pruning
 plt.figure(figsize=(15, 10))
-tree.plot_tree(clf, filled=True, feature_names=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'], class_names=iris.target_names)
+tree.plot_tree(clf, filled=True, feature_names=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'], class_names=iris.target_names.tolist())
 plt.title("Decision Tree Before Pruning")
 plt.show()
 
@@ -87,7 +86,7 @@ print("Accuracy on training set after pruning: {:.4f}".format(accuracy_score(y_t
 
 # Visualize the Decision Tree after pruning
 plt.figure(figsize=(15, 10))
-tree.plot_tree(best_clf, filled=True, feature_names=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'], class_names=iris.target_names)
+tree.plot_tree(best_clf, filled=True, feature_names=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'], class_names=iris.target_names.tolist())
 plt.title("Decision Tree After Pruning")
 plt.show()
 
